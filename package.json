@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib",
     "start": "npx cypress open",
-    "runHeadless": "./node_modules/.bin/cypress run --headless"
+    "runHeadless": "./node_modules/.bin/cypress run --headless",
+    "f":"skylab-cms=http://localhost:8080/Skylab-CMS cy2 run --reporter mochawsome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true --parallel --record --key somekey --ci-build-id build-1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cy2": "^4.0.6",
+    "cypress-cloud": "^1.7.3",
     "exceljs": "^4.3.0",
     "node": "^19.8.1",
     "read-excel-file": "^5.6.1",

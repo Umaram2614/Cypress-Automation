@@ -5,5 +5,6 @@ describe('Login', () => {
   it.only('logs in successfully', () => {
     loginPage.visit()
     loginPage.loginIput()
+    debugger;
   })
 })

@@ -7,6 +7,7 @@ module.exports = defineConfig({
     BaseUrl: "https://cmsweb-new-qa2.skylab.world/",
     Dashboard: "https://cmsweb-new-qa2.skylab.world/home"
   },
+  
 
   e2e: {
     watchForFileChanges: false, //cltest will not run after immediate change in the script 
@@ -14,13 +15,15 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       require('@cypress/code-coverage/task')(on, config)
       on('task', {
+        
         log(message) {
           console.log(message)
           return null// implement node event listeners here
         },
         specPattern: 'cypress/api-test/**.{js,jsx,ts,tsx}',
-        projectId: "Skylab_CMS",
+        projectId: "Skylab-cms",
         experimentalRunAllSpecs: true
+        
       })
       return cloudPlugin(on, config);
       return config

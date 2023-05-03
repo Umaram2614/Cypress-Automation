@@ -5,7 +5,7 @@
     
     "module": "commonjs",                                /* Specify what module code is generated. */
     
-    "types": ["cypress"],    
+    "types": ["cypress","node"],    
     
     //"typeRoots": [ "../node_modules/@types" ],                            /* Specify type package names to be included without being referenced in a source file. */
      //"resolveJsonModule": true,                        /* Enable importing .json files. */
@@ -69,8 +69,9 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    
+    "allowJs": true,
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
     
-  }
+  },
+  "include": ["**/*.*"]
 }

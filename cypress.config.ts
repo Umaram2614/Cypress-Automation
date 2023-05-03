@@ -15,11 +15,11 @@ module.exports = defineConfig({
     watchForFileChanges: false, //cltest will not run after immediate change in the script 
     defaultCommandTimeout: 5000, //execution will be delayed for mentioned millisecond if any failure occurs in the command 
     videoUploadOnPasses: false,
-    setupNodeEvents(on, config) {
+    setupNodeEvents(on:any, config:any) {
       require('@cypress/code-coverage/task')(on, config)
       on('task', {
         
-        log(message) {
+        log(message:any) {
           console.log(message)
           return null// implement node event listeners here
         },
